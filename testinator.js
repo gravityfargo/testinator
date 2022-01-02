@@ -184,15 +184,15 @@ class TestinatorWindow {
     this._box.add(this.toggleGrid);
     this.toggleGrid.attach(this.extensionEnableButton, 0, 0, 1, 1);
     this.toggleGrid.attach(this.disableExtensionButton, 1, 0, 1, 1);
-    this._box.add(this.extensionRemoveButton);
-    this._box.add(this.journalCtlButton);
     this._box.add(this.listExtensions);
     this._box.add(this.testNotifyButton);
+    this._box.add(this.extensionRemoveButton);
     this._box.add(this.commandLabel);
     this._box.add(this.commandGrid);
     this._window.add(this._box);
     this.commandGrid.attach(this.commandField, 0, 0, 1, 1);
     this.commandGrid.attach(this.commandButton, 1, 0, 1, 1);
+    this._box.add(this.journalCtlButton);
     this._box.add(this.restartGNOME);
     this._box.add(this.alertLabel);
 
