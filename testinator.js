@@ -86,6 +86,19 @@ class TestinatorWindow {
 
 
 
+    this.journalCtlButton = new Gtk.Button({
+      label: "Open GNOME journalctl"
+    });
+    this.journalCtlButton.connect("clicked", () => {
+
+        this.command("gnome-terminal --window -x bash -c \"journalctl -f -o cat /usr/bin/gnome-shell\"");
+        
+        
+    });
+
+
+
+
 
     this.listExtensions = new Gtk.Button({
       label: "List Extensions"
@@ -172,6 +185,7 @@ class TestinatorWindow {
     this.toggleGrid.attach(this.extensionEnableButton, 0, 0, 1, 1);
     this.toggleGrid.attach(this.disableExtensionButton, 1, 0, 1, 1);
     this._box.add(this.extensionRemoveButton);
+    this._box.add(this.journalCtlButton);
     this._box.add(this.listExtensions);
     this._box.add(this.testNotifyButton);
     this._box.add(this.commandLabel);
@@ -182,16 +196,6 @@ class TestinatorWindow {
     this._box.add(this.restartGNOME);
     this._box.add(this.alertLabel);
 
-
-
-
-
-
-
-
-    //Notifcation Tester
-
-    //this._box.add(notifyButton);
     this._box.show_all();
 
   }
