@@ -1,5 +1,3 @@
-#!/usr/bin/env gjs
-
 imports.gi.versions.Gtk = "3.0";
 const { Gio, Gtk, Notify, Gdk, GLib } = imports.gi;
 
@@ -66,7 +64,7 @@ class TestinatorWindow {
 }
 
 const application = new Gtk.Application({
-  application_id: "org.gnome.Sandbox.ImageViewerExample",
+  application_id: "org.rrfss.test.Testinator",
   flags: Gio.ApplicationFlags.FLAGS_NONE,
 });
 
